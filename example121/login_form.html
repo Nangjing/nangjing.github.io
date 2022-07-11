@@ -1,0 +1,43 @@
+<div class="bar">
+    <a href="#" id="my_userarea">Log In</a>
+</div>
+<div style="display: none;" id="my_panel">
+    <div class="column">
+        <h3>My website title</h3>
+        <p>My website description. Our website was created for anybody. Here we can read recent news, tutorials, and find many useful information. Welcome !</p>
+        <p><a class="more" href="#about.php" rel="nofollow"><span>Read more</span></a></p>
+    </div>
+    <div class="column">
+        <form class="login_form" action="index.php" method="post">
+            <h3>Log In</h3>
+            <label>Nickname:</label><input type="text" name="username">
+            <label>Password:</label><input type="password" name="password">
+            <label>{captcha}</label><input type="text" name="captcha">
+            <input type="submit" name="LogIn" value="Login">
+            <a class="more" href="#forgot.php" rel="nofollow"><span>Forgot password?</span></a>
+        </form>
+    </div>
+    <div class="column">
+        <h3>Still not our member? Join us!</h3>
+        <p>Which gives us a registration? This gives us opportunity to become full member of our website. You can communicate with another member etc..</p>
+        <p align="center"><a class="more" href="#registration.php" rel="nofollow"><span>Registration</span></a></p>
+    </div>
+    <div style="clear:both"></div>
+    <hr>
+    <div class="close"><a id="my_close" class="my_close">Hide this panel</a></div>
+</div>
+
+<script language="javascript" type="text/javascript">
+$(document).ready(function() {
+    $('#my_userarea').click(function(){
+        $('div#my_panel').slideToggle('slow');
+        return false;
+    });
+    $('#my_close').click(function(){
+        $('div#my_panel').slideUp('slow');
+        return false;
+    });
+});
+</script>
+
+<h3>You can use username "User1" of "User2" or "User3" and password "password" to login in system</h3>
